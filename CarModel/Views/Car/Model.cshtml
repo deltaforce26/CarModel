@@ -5,9 +5,13 @@
 
     string name = Model.Name;
     string year = Model.Year;
+    string color = Model.Color;
     ViewData["Title"] = "View";
 }
-
+<style>
+    body{background-color: @color}
+</style>
 <h1>Details</h1>
 <p>Car Model: @name</p>
 <p>Year: @year</p>
+

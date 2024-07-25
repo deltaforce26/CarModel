@@ -10,13 +10,13 @@ namespace CarModel.Controllers
             return View();
         }
 
-        public IActionResult Model(string year, string name)
+        public IActionResult Model(string year, string name,string color)
         {
             Car car = new Car
             {
-
                 Name = string.IsNullOrEmpty(name) ? "No model" : name,
-                Year = string.IsNullOrEmpty(year) ? "N/A" : year
+                Year = string.IsNullOrEmpty(year) ? "N/A" : year,
+                Color = color 
             };
             return View(car);
         }
